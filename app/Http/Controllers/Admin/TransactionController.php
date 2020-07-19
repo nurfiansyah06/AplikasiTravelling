@@ -3,8 +3,8 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Transaction;
 use App\Http\Requests\Admin\TransactionRequest;
+use App\Transaction;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
@@ -18,10 +18,10 @@ class TransactionController extends Controller
     public function index()
     {
         $items = Transaction::with([
-            'details','travel_package','user'
+            'details', 'travel_package', 'user'
         ])->get();
 
-        return view('pages.admin.transaction.index', [
+        return view('pages.admin.transaction.index',[
             'items' => $items
         ]);
     }
@@ -45,8 +45,6 @@ class TransactionController extends Controller
     public function store(TransactionRequest $request)
     {
         $data = $request->all();
-        $data['slug'] = Str::slug($request->title);
-
 
         Transaction::create($data);
         return redirect()->route('transaction.index');
@@ -61,10 +59,10 @@ class TransactionController extends Controller
     public function show($id)
     {
         $item = Transaction::with([
-            'details','travel_package','user'
-        ])->findorfail($id);
+            'details', 'travel_package', 'user'
+        ])->findOrFail($id);
 
-        return view('pages.admin.transaction.detail', [
+        return view('pages.admin.transaction.detail',[
             'item' => $item
         ]);
     }
@@ -77,12 +75,11 @@ class TransactionController extends Controller
      */
     public function edit($id)
     {
-        $item = Transaction::FindorFail($id);
+        $item = Transaction::findOrFail($id);
 
-        return view('pages.admin.transaction.edit', [
+        return view('pages.admin.transaction.edit',[
             'item' => $item
         ]);
-
     }
 
     /**
@@ -95,9 +92,9 @@ class TransactionController extends Controller
     public function update(TransactionRequest $request, $id)
     {
         $data = $request->all();
-        $data['slug'] = Str::slug($request->title);
-        
-        $item = Transaction::FindorFail($id);
+
+        $item = Transaction::findOrFail($id);
+
         $item->update($data);
 
         return redirect()->route('transaction.index');
@@ -111,9 +108,10 @@ class TransactionController extends Controller
      */
     public function destroy($id)
     {
-        $item = Transaction::FindorFail($id);
+        $item = Transaction::findorFail($id);
         $item->delete();
 
         return redirect()->route('transaction.index');
+
     }
 }

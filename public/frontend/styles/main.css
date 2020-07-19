@@ -17,16 +17,6 @@ body {
   color: #071C4D !important;
 }
 
-.btn-login {
-  background-color: #071C4D;
-  color: #ffffff;
-}
-
-.btn-login:hover {
-  background-color: #3e78ff;
-  color: black;
-}
-
 .btn-navbar-right {
   margin-top: -10px !important;
   margin-bottom: -8px !important;
@@ -35,15 +25,26 @@ body {
   border-radius: 0;
 }
 
+.btn-login {
+  background-color: #071C4D;
+  color: #fff;
+}
+
+.btn-login:hover {
+  background-color: #1E3771;
+  color: #fff;
+}
+
 header {
-  margin-top: -68px;
-  padding: 180px 0px 165px;
-  background-image: url("../images/header-background.jpg");
+  padding: 180px 0 165px;
+  margin-top: -70px;
+  background-image: url("../images/header.jpg");
   background-size: cover;
 }
 
-header h1, header p {
-  color: white;
+header h1,
+header p {
+  color: #fff;
 }
 
 header h1 {
@@ -54,17 +55,16 @@ header h1 {
 
 header p {
   font-size: 22px;
-  font-weight: lighter;
 }
 
 header .btn-get-started {
-  background-color: #FF9e53;
-  color: white;
+  background-color: #FF9E53;
+  color: #fff;
 }
 
 header .btn-get-started:hover {
-  background-color: #af6024;
-  color: white;
+  background-color: #FFAA69;
+  color: #fff;
 }
 
 .section-stats {
@@ -73,18 +73,17 @@ header .btn-get-started:hover {
 
 .section-stats .stats-detail {
   padding-top: 15px;
-  background-color: #ffffff;
-  padding-left: 30px;
+  background-color: #fff;
+  padding-left: 40px;
 }
 
 .section-stats h2 {
-  font-size: 24px;
-  font-family: 'Assistant', sans-serif;
+  font-size: 30px;
   margin-bottom: 0;
 }
 
 .section-stats p {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: lighter;
 }
 
@@ -99,8 +98,9 @@ header .btn-get-started:hover {
   margin-top: 150px;
 }
 
-.section-popular .section-popular-heading h2, .section-popular .section-popular-heading p {
-  color: #ffffff;
+.section-popular .section-popular-heading h2,
+.section-popular .section-popular-heading p {
+  color: #fff;
 }
 
 .section-popular .section-popular-heading h2 {
@@ -115,8 +115,8 @@ header .btn-get-started:hover {
 
 .section-popular-content .section-popular-travel .card-travel {
   min-height: 380px;
-  background-color: #000000;
-  color: #ffffff;
+  background-color: #ddd;
+  color: #fff;
   padding: 30px;
   background-size: cover;
   margin-bottom: 20px;
@@ -124,54 +124,59 @@ header .btn-get-started:hover {
 
 .section-popular-content .section-popular-travel .travel-country {
   font-size: 18px;
-  color: #ffffff;
+  color: #fff;
 }
 
 .section-popular-content .section-popular-travel .travel-location {
   font-size: 26px;
-  color: #ffffff;
+  color: #fff;
 }
 
 .section-popular-content .section-popular-travel .travel-button .btn-travel-details {
-  background-color: #FF9e53;
-  color: #ffffff;
+  background-color: #FF9E53;
+  color: #fff;
 }
 
 .section-popular-content .section-popular-travel .travel-button .btn-travel-details:hover {
-  background-color: #ffae6f;
-  color: #ffffff;
+  background-color: #FFAE6F;
+  color: #fff;
 }
 
-.section-network {
-  margin-top: 70px;
+.section-networks {
+  background-color: #fff;
+  margin-top: -170px;
+  padding-top: 240px;
+  padding-bottom: 50px;
 }
 
-.section-network h2 {
+.section-networks h2 {
   font-family: 'Playfair Display', serif;
   font-weight: bold;
   font-size: 40px;
 }
 
-.section-network img {
+.section-networks p {
+  font-size: 18px;
+}
+
+.section-networks img {
   max-width: 100%;
 }
 
-.section-testimonial {
+.section-testimonial-heading {
   background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#f7f9ff));
   background: linear-gradient(#fff 0%, #f7f9ff 100%);
   padding-top: 50px;
   min-height: 506px;
-  margin-top: 30px;
 }
 
-.section-testimonial h2 {
-  font-family: 'Playfair Display', serif;
+.section-testimonial-heading h2 {
+  font-family: "Playfair Display", serif;
   font-weight: bold;
   font-size: 40px;
-  color: #071C4D;
 }
 
-.section-testimonial p {
+.section-testimonial-heading p {
   font-size: 18px;
 }
 
@@ -181,54 +186,55 @@ header .btn-get-started:hover {
 }
 
 .section-testimonial-content .card-testimonial {
-  padding: 40px 20px 20px;
+  padding: 40px 20px 10px;
   border-radius: 11px;
+  margin-bottom: 20px;
 }
 
-.section-testimonial-content .testimonial-content {
+.section-testimonial-content .card-testimonial .testimonial-content {
   min-height: 380px;
 }
 
-.section-testimonial-content h3 {
+.section-testimonial-content .card-testimonial h3 {
   font-size: 22px;
 }
 
-.section-testimonial-content .testimonial {
+.section-testimonial-content .card-testimonial .testimonial {
   font-weight: 200;
   font-size: 26px;
   color: #6e6e6e;
   min-height: 160px;
 }
 
-.section-testimonial-content .trip-to {
+.section-testimonial-content .card-testimonial .trip-to {
   font-weight: normal;
   font-size: 22px;
   color: #6e6e6e;
 }
 
-.section-testimonial-content hr {
+.section-testimonial-content .card-testimonial hr {
   margin-left: -20px;
   margin-right: -20px;
 }
 
 .section-testimonial-content .btn-get-started {
-  background-color: #FF9e53;
-  color: white;
+  background-color: #FF9E53;
+  color: #fff;
 }
 
 .section-testimonial-content .btn-get-started:hover {
-  background-color: #af6024;
-  color: white;
+  background-color: #FFAA69;
+  color: #fff;
 }
 
 .section-testimonial-content .btn-need-help {
-  background-color: #f2f2f2;
-  color: #c3c3c3;
+  background-color: #F2F2F2;
+  color: #C3C3C3;
 }
 
 .section-testimonial-content .btn-need-help:hover {
-  background-color: #fafafa;
-  color: #c3c3c3;
+  background-color: #FAFAFA;
+  color: #C3C3C3;
 }
 
 .section-footer a {
@@ -237,7 +243,7 @@ header .btn-get-started:hover {
 
 .section-details-header {
   min-height: 310px;
-  background: #e4e6eb;
+  background: #E4E6EB;
   margin-top: -70px;
 }
 
@@ -257,194 +263,203 @@ header .btn-get-started:hover {
   color: #071C4D;
 }
 
-.card-details {
+.section-details-content .card-details {
   padding: 30px;
   border-radius: 11px;
 }
 
-.card-details h1 {
+.section-details-content .card-details h1 {
   font-size: 26px;
 }
 
-.card-details h2 {
+.section-details-content .card-details h2 {
   font-size: 20px;
 }
 
-.card-details p {
+.section-details-content .card-details p {
   font-size: 18px;
-  color: #b1b1b1;
+  color: #B1B1B1;
 }
 
-.card-details .row-information th {
-  font-weight: 400;
+.section-details-content .card-details h3 {
+  font-weight: 300;
+  font-size: 14px;
+  color: #071c4d;
+}
+
+.section-details-content .card-details .trip-informations th {
+  font-weight: 300;
   font-size: 18px;
   color: #071C4D;
 }
 
-.card-details .row-information td {
+.section-details-content .card-details .trip-informations td {
   font-weight: 300;
   font-size: 18px;
-  color: #b1b1b1;
+  color: #B1B1B1;
 }
 
-.card-details .disclaimer {
-  font-size: 14px;
-  font-weight: 300;
-  color: #b1b1b1;
-}
-
-.card-details h3 {
-  font-weight: 600;
-  font-size: 14px;
+.section-details-content .card-details .trip-informations .text-blue {
   color: #071C4D;
+  font-weight: bold;
 }
 
-.card-details .gj-datepicker .datepicker {
+.section-details-content .card-details .trip-informations .text-orange {
+  color: #FF9E53;
+  font-weight: bold;
+}
+
+.section-details-content .card-details .payment-instructions {
+  font-weight: 300;
+  font-size: 14px;
+  color: #b1b1b1;
+}
+
+.section-details-content .card-details .bank .bank-item h3 {
+  font-size: 18px;
+  color: #071C4D;
+  margin-bottom: 0;
+}
+
+.section-details-content .card-details .bank .bank-item p {
+  margin-bottom: 0;
+}
+
+.section-details-content .card-details .bank .bank-item .description {
+  margin-left: 10px;
+  overflow: hidden;
+  float: left;
+}
+
+.section-details-content .card-details .bank .bank-item .description p {
+  font-weight: normal;
+  font-size: 16px;
+  color: #071c4d;
+}
+
+.section-details-content .card-details .bank .bank-image {
+  width: 45px;
+  height: 45px;
+  float: left;
+}
+
+.section-details-content .card-details .disclaimer {
+  font-weight: 300;
+  font-size: 14px;
+  color: #B1B1B1;
+}
+
+.section-details-content .card-details .gj-datepicker .datepicker {
   border-right: 0;
 }
 
-.card-details .gj-datepicker .input-group-append .btn {
+.section-details-content .card-details .gj-datepicker .input-group-append .btn {
   padding-right: 30px;
 }
 
-.card-details .btn-add-now {
+.section-details-content .card-details .btn-add-now {
   background-color: #071C4D;
   color: #fff;
 }
 
-.card-details .btn-add-now:hover {
-  background-color: #1044bd;
+.section-details-content .card-details .btn-add-now:hover {
+  background-color: #1B3B86;
   color: #fff;
 }
 
-.card-details .text-blue {
-  color: #071C4D;
-  font-weight: bold;
-}
-
-.card-details .text-orange {
-  color: #da6913;
-  font-weight: bold;
-}
-
-.card-details .payment-instruction {
-  font-weight: 300;
-  font-size: 14px;
-  color: #b1b1b1;
-}
-
-.card-details .bank .bank-item h3 {
-  font-size: 18px;
-  color: #071C4D;
-  margin-bottom: 0;
-}
-
-.card-details .bank .bank-item p {
-  margin-bottom: 0;
-}
-
-.card-details .bank .bank-item .description {
-  margin-left: 10px;
-  overflow: hidden;
-  float: left;
-}
-
-.card-details .bank .bank-item .description p {
-  font-weight: normal;
-  font-size: 16px;
-  color: #071C4D;
-}
-
-.card-details .bank .bank-image {
-  width: 45px;
-  height: 45px;
-  float: left;
-}
-
-.card-right {
+.section-details-content .card-right {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
+  border-bottom: 0;
 }
 
-.features {
+.section-details-content .features {
   margin-top: 20px;
 }
 
-.features h3 {
+.section-details-content .features h3 {
   font-size: 18px;
   color: #071C4D;
   margin-bottom: 0;
 }
 
-.features p {
+.section-details-content .features p {
   margin-bottom: 0;
 }
 
-.features .description {
+.section-details-content .features .description {
   margin-left: 10px;
   overflow: hidden;
   float: left;
 }
 
-.features-images {
-  height: 45px;
+.section-details-content .features .features-image {
   width: 45px;
+  height: 45px;
   float: left;
 }
 
-.gallery .xzoom-container {
+.section-details-content .gallery .xzoom-container {
   display: block;
 }
 
-.gallery .xzoom {
+.section-details-content .gallery .xzoom-container .xzoom {
   width: 100%;
   -webkit-box-shadow: none;
           box-shadow: none;
   margin-bottom: 10px;
 }
 
-.gallery .xactive {
-  border: 2px solid #071C4D;
+.section-details-content .gallery .xzoom-container .xactive {
+  border: 4px solid #1ABC9C;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
 
-.members .member-image {
+.section-details-content .member .member-image {
   width: 40px;
   height: 40px;
 }
 
-.join-container {
-  margin-top: -27px;
+.section-details-content .join-container {
+  margin-top: -16px;
 }
 
-.btn-join-now {
-  background-color: #FF9e53;
+.section-details-content .btn-join-now {
+  background-color: #FF9E53;
   color: #fff;
-  border-radius: 11px;
-  height: 57px;
+  border-radius: 0;
+}
+
+.section-details-content .btn-join-now:hover {
+  background-color: #FFB57C;
+  color: #fff;
+}
+
+.section-success {
+  height: 90vh;
+}
+
+.section-success h1 {
+  font-weight: 600;
   font-size: 26px;
-  font-weight: bolder;
+  color: #071C4D;
 }
 
-.btn-join-now:hover {
-  background-color: #da6913;
-  color: #fff;
+.section-success p {
+  font-weight: 300;
+  font-size: 18px;
+  color: #b1b1b1;
 }
 
-.btn-home {
+.section-success .btn-home-page {
+  border-radius: 4px;
   background-color: #071C4D;
   color: #fff;
 }
 
-.btn-home:hover {
-  background-color: #143d9b;
+.section-success .btn-home-page:hover {
+  background-color: #2A488E;
   color: #fff;
-}
-
-.success p {
-  font-weight: 300;
-  font-size: 16px;
-  color: #b1b1b1;
 }
 /*# sourceMappingURL=main.css.map */

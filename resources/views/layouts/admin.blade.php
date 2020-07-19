@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>SB Admin 2 - Dashboard</title>
+  <title>NOMADS Admin</title>
 
   @include('includes.admin.style')
 
@@ -27,11 +27,8 @@
 
       <!-- Main Content -->
       <div id="content">
-
         @include('includes.admin.navbar')
-
-       @yield('content')
-
+        @yield('content')
       </div>
       <!-- End of Main Content -->
 
@@ -60,11 +57,11 @@
         </div>
         <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
         <div class="modal-footer">
-          <form action="{{ url('logout') }}" method="post">
-            @csrf
-            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-            <button class="btn btn-primary" type="submit" >Logout</button>
-          </form>
+            <form action="{{  url('logout') }}" method="POST">
+                @csrf
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                <button class="btn btn-primary" type="submit">Logout</button>
+            </form>
         </div>
       </div>
     </div>

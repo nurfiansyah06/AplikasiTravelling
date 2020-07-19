@@ -3,8 +3,8 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\TravelPackage;
 use App\Http\Requests\Admin\TravelPackageRequest;
+use App\TravelPackage;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
@@ -19,7 +19,7 @@ class TravelPackageController extends Controller
     {
         $items = TravelPackage::all();
 
-        return view('pages.admin.travel-package.index', [
+        return view('pages.admin.travel-package.index',[
             'items' => $items
         ]);
     }
@@ -45,7 +45,6 @@ class TravelPackageController extends Controller
         $data = $request->all();
         $data['slug'] = Str::slug($request->title);
 
-
         TravelPackage::create($data);
         return redirect()->route('travel-package.index');
     }
@@ -69,12 +68,11 @@ class TravelPackageController extends Controller
      */
     public function edit($id)
     {
-        $item = TravelPackage::FindorFail($id);
+        $item = TravelPackage::findOrFail($id);
 
-        return view('pages.admin.travel-package.edit', [
+        return view('pages.admin.travel-package.edit',[
             'item' => $item
         ]);
-
     }
 
     /**
@@ -88,8 +86,9 @@ class TravelPackageController extends Controller
     {
         $data = $request->all();
         $data['slug'] = Str::slug($request->title);
-        
-        $item = TravelPackage::FindorFail($id);
+
+        $item = TravelPackage::findOrFail($id);
+
         $item->update($data);
 
         return redirect()->route('travel-package.index');
@@ -103,9 +102,10 @@ class TravelPackageController extends Controller
      */
     public function destroy($id)
     {
-        $item = TravelPackage::FindorFail($id);
+        $item = TravelPackage::findorFail($id);
         $item->delete();
 
         return redirect()->route('travel-package.index');
+
     }
 }
