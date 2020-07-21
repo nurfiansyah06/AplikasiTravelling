@@ -11,6 +11,10 @@
 |
 */
 
+// Route::get('/coba', function () {
+//     return view('auth.login');
+// });
+
 Route::get('/', 'HomeController@index')
     ->name('home');
 
@@ -50,3 +54,4 @@ Route::prefix('admin')
     });
 
 Auth::routes(['verify' => true]);
+
